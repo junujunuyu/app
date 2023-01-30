@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Movie from "../component/Movie";
 import MovieForm from "../component/MovieForm";
 const Movies = () => {
-   const [movies,setMovies]=useState([]); 
+    const [movies,setMovies]=useState([]); 
    const addMovie = (movie) => {
       setMovies([
          ...movies,

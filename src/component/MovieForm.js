@@ -17,23 +17,22 @@ const MovieForm = ({addMovie}) => {
         resetErrors();
         let validate=true;
         if(!movieTitle){
-            setTitleError('영화제목을 입력하세요')
+            setTitleError('영화제목을 입력하세요');
             validate=false;
         }
         if(!movieYear){
-            setYearError('개봉년도를 입력하세요')
+            setYearError('개봉연도를 입력하세요');
             validate=false;
         }
         return validate;
     }
-
-    const resetErrors = () => {
+    const resetErrors = () =>{
         setTitleError('');
         setYearError('');
     }
     const onSubmit = (e) => {
         e.preventDefault();
-        
+
         if(validateForm()){
             addMovie({
                 id:Date.now(),
@@ -41,7 +40,8 @@ const MovieForm = ({addMovie}) => {
                 year:movieYear
             });
         }
-
+        
+        
         setMovieTitle('');
         setMovieYear('');
         inputRef.current.focus();
@@ -52,7 +52,7 @@ const MovieForm = ({addMovie}) => {
             <div className="err">{titleError}</div>
             <input type="text" placeholder="개봉연도를 쓰세요" value={movieYear} onChange={(e) => {setMovieYear(e.target.value)}}/>
             <div className="err">{yearError}</div>
-            <button type="submit" className='btn'>ADD</button>
+            <button type="submit"  className='btn'>ADD</button>
         </form>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
+/* import Users from '../pages/Users'; */
 
-const componentName = (users) => {
+const UserList = ({users}) => {
     return (
         <div className='container'>
             {users.map((user) => {
@@ -11,9 +12,10 @@ const componentName = (users) => {
                         </div>
                     </div>
                 )
-            })};
+            })}
+            
         </div>
     );
 };
 
-export default componentName;
+export default UserList;

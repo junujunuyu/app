@@ -1,16 +1,14 @@
 import React from 'react';
-
-const componentName = (props) => {
+/* (props) */
+const Movie =  ({movie, removeMovie})=> {
     return (
-        <div className="movie-wrap">
-            <div className="movie">
-                <div className="movie-title">{props.movie.title}
-                    <span className="movie-year">{props.movie.year}</span>
-                </div>
-                <div><button className='d-btn'  onClick={( ) => {}}>삭제</button></div>
+        <div className='movie'>
+            <div className='movie-title'>{movie.title}
+                <span className='movie-year'>{movie.year}</span>
             </div>
-        </div >
+            <div><button className='d-btn' onClick={()=> removeMovie(movie.id)}>삭제</button></div>
+        </div>
     );
 };
 
-export default componentName;
+export default Movie;
